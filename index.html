@@ -3,30 +3,28 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Spice Theory 🌶️</title>
+<title>Spice Theory </title>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Base */
-  * { margin:0; padding:0; box-sizing:border-box; font-family: 'Montserrat', sans-serif;}
-  body {background:#111; color:#fff; overflow-x:hidden;}
+  * {margin:0; padding:0; box-sizing:border-box; font-family:'Montserrat',sans-serif;}
+  body {background:#111; color:#fff; overflow-x:hidden; scroll-behavior:smooth;}
   a {text-decoration:none; color:inherit;}
 
   /* Hero Section */
   .hero {
-    height: 100vh;
+    height:100vh;
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(135deg,#ff6a00,#ee0979);
     text-align:center;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
     position:relative;
-    overflow:hidden;
   }
-  .hero h1 {font-size:60px; margin-bottom:15px; animation: fadeInDown 1s;}
-  .hero p {font-size:22px; margin-bottom:30px; animation: fadeInUp 1s;}
-  .hero .btn {padding:15px 30px; background:#fff; color:#111; font-weight:bold; border-radius:8px; transition:0.3s; animation: fadeIn 1.5s;}
+  .hero h1 {font-size:70px; margin-bottom:20px; animation: fadeInDown 1s;}
+  .hero p {font-size:24px; margin-bottom:40px; animation: fadeInUp 1s;}
+  .hero .btn {padding:18px 40px; background:#fff; color:#111; font-weight:bold; border-radius:10px; transition:0.3s; animation: fadeIn 1.5s;}
   .hero .btn:hover {background:#ff6a00; color:#fff; transform:scale(1.05);}
 
   /* Animations */
@@ -34,20 +32,23 @@
   @keyframes fadeInDown { from {opacity:0; transform:translateY(-50px);} to {opacity:1; transform:translateY(0);} }
   @keyframes fadeInUp { from {opacity:0; transform:translateY(50px);} to {opacity:1; transform:translateY(0);} }
 
+  /* Section Styling */
+  section {padding:80px 50px;}
+  h2 {font-size:40px; margin-bottom:40px; text-align:center; color:#ff6a00;}
+
   /* Features Section */
   .features {
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:30px;
-    padding:80px 50px;
     background:#222;
   }
   .feature {
     background:#333;
     padding:30px;
     border-radius:15px;
-    transition:0.3s;
     text-align:center;
+    transition:0.3s;
   }
   .feature:hover {transform:translateY(-10px); background:#ff6a00;}
   .feature img {width:80px; margin-bottom:20px;}
@@ -59,29 +60,58 @@
     display:flex;
     flex-wrap:wrap;
     gap:20px;
-    padding:80px 50px;
     justify-content:center;
     background:#111;
   }
   .gallery img {
-    width:300px;
-    height:200px;
+    width:350px;
+    height:250px;
     object-fit:cover;
     border-radius:15px;
     transition:0.3s;
   }
   .gallery img:hover {transform:scale(1.1); filter:brightness(1.2);}
 
+  /* Testimonials */
+  .testimonials {
+    background:#222;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+  }
+  .testimonial {
+    background:#333;
+    padding:30px;
+    border-radius:15px;
+    max-width:400px;
+    text-align:center;
+    transition:0.3s;
+  }
+  .testimonial:hover {transform:translateY(-10px); background:#ff6a00;}
+  .testimonial p {font-style:italic; color:#ddd; margin-bottom:10px;}
+  .testimonial h4 {color:#fff;}
+
+  /* CTA Section */
+  .cta {
+    background:linear-gradient(135deg,#ff6a00,#ee0979);
+    text-align:center;
+    padding:80px 50px;
+  }
+  .cta h2 {color:#fff; margin-bottom:30px;}
+  .cta a {padding:18px 40px; background:#fff; color:#111; font-weight:bold; border-radius:10px; transition:0.3s;}
+  .cta a:hover {background:#111; color:#fff; transform:scale(1.05);}
+
   /* Footer */
   footer {
-    background:#222;
+    background:#111;
     text-align:center;
     padding:40px 20px;
     font-size:14px;
     color:#aaa;
   }
 
-  /* Button hover effect */
+  /* Button glow effect */
   .btn-glow {
     position:relative;
     padding:15px 40px;
@@ -110,17 +140,18 @@
 
 <!-- Hero -->
 <section class="hero">
-  <h1>Spice Theory 🌶️</h1>
+  <h1>Spice Theory </h1>
   <p>Bold Flavors. Modern Cuisine. Unforgettable Experience.</p>
   <a href="#features" class="btn btn-glow">Explore Now</a>
 </section>
 
 <!-- Features -->
 <section class="features" id="features">
+  <h2>Our Features</h2>
   <div class="feature">
     <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=80&q=80" alt="Flavors">
     <h3>Signature Flavors</h3>
-    <p>Experience our unique and bold flavors crafted for every palate.</p>
+    <p>Experience our unique bold flavors crafted for every palate.</p>
   </div>
   <div class="feature">
     <img src="https://images.unsplash.com/photo-1617196037580-ffbcb9c33045?auto=format&fit=crop&w=80&q=80" alt="Dining">
@@ -136,10 +167,34 @@
 
 <!-- Gallery -->
 <section class="gallery">
+  <h2>Gallery</h2>
   <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=400&q=80" alt="Dish 1">
   <img src="https://images.unsplash.com/photo-1617196037580-ffbcb9c33045?auto=format&fit=crop&w=400&q=80" alt="Dish 2">
   <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80" alt="Dish 3">
   <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=400&q=80" alt="Dish 4">
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials">
+  <h2>What Clients Say</h2>
+  <div class="testimonial">
+    <p>"Amazing flavors and perfect ambiance! Highly recommend!"</p>
+    <h4>- Sarah J.</h4>
+  </div>
+  <div class="testimonial">
+    <p>"Our event was flawless thanks to Spice Theory."</p>
+    <h4>- Michael K.</h4>
+  </div>
+  <div class="testimonial">
+    <p>"Best dining experience I've ever had!"</p>
+    <h4>- Emily R.</h4>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Book Your Experience Today!</h2>
+  <a href="#" class="btn-glow">Contact Us</a>
 </section>
 
 <!-- Footer -->
